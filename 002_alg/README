@@ -1,0 +1,35 @@
+This problem is intended for you to practice the
+basics of algorithmic development and execution
+by hand that you learned in Chapter 1.
+
+Here is what you need to do:
+
+ (1) Find your partner. Do:
+       my-partner 002_alg
+     and you will see your group number and your partner's netID.
+ (2) You should do Group A Problem 1, and your partner should do
+     Group B Problem 1. When you are both finished writing your
+     algorithm and executing it for N=6, swap with your partner. 
+     Execute your partner's algorithm and compare answers.
+     Did you get the same answers?
+     Was something ambiguous in the algorithm?
+     Did you find the patterns correctly?
+ (3) Now that you have practice developing a simple algorithm, do
+     Group A Problem 2. When you and your partner are both finished,
+     swap and compare as before.
+ (4) When you and your partner are both satisfied with your
+     respective Problem 2s, create a file answers.txt, and write four
+     lines in it:
+     - Your answer for N=7
+     - Your answer for N=8
+     - Your partner's answer for N=7
+     - Your partner's answer for N=8
+     Each line should consist only of the integers in the sequence,
+     each separated by a space.
+     
+After you have done that, save the file, add it to git, commit it,
+push it, and request it to be graded (if you do not remember how,
+look back at 000_submit).
+
+
+
