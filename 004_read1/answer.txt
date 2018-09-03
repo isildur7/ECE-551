@@ -1,0 +1,8 @@
+a is 2
+b is 7
+a * i + b = 7
+a * i + b = 10
+a * i + b = 13
+a * i + b = 16
+a * i + b = 19
+a is 4
