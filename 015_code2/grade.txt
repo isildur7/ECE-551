@@ -1,0 +1,88 @@
+Grading at 09/05/2018:19:31:14.816216
+For commit ID 7efd7db4d2ea6880434beb9c327eb583ceeba4ec
+[32mSuccessfully compiled ['code2.c'].[0m
+Checking for 'int printTriangle(int size)'
+[32mfound 'int printTriangle(int size)' in your source code 'code2.c'[0m
+Checking for 'int main(void)'
+[32mfound 'int main(void)' in your source code 'code2.c'[0m
+********************test case 1********************
+Running original code
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[31mIncorrect: your output did not match the expected output.[0m
+[31mfailed test case 1[0m
+[32mSuccessfully compiled ['code2.c'].[0m
+********************test case 2********************
+checking printTriangle(0)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+checking printTriangle(1)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+checking printTriangle(2)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+checking printTriangle(3)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 5[0m
+********************test case 6********************
+checking printTriangle(4)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 6[0m
+********************test case 7********************
+checking printTriangle(7)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 7[0m
+********************test case 8********************
+checking printTriangle(9)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 8[0m
+********************test case 9********************
+checking printTriangle(12)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 9[0m
+********************test case 10********************
+checking printTriangle(114)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 10[0m
+********************test case 11********************
+checking printTriangle(157)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 11[0m
+********************test case 12********************
+checking printTriangle(211)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 12[0m
+********************test case 13********************
+checking printTriangle(2536)
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 13[0m
+[31mfailed 1 out of 13 test cases[0m
+Overall Grade: B
