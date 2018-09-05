@@ -1,5 +1,5 @@
-Grading at 09/05/2018:15:36:25.843916
-For commit ID 5e9b7597abc69750bec8556cdc7eb8094516398f
+Grading at 09/05/2018:15:41:31.068945
+For commit ID 84f443d736ecdfe5ad163ee39fbf036b392af02b
 [32mSuccessfully compiled ['code1.c'].[0m
 Checking for 'int max(int num1, int num2)'
 [32mfound 'int max(int num1, int num2)' in your source code 'code1.c'[0m
@@ -10,7 +10,7 @@ Running original code
 Exit status of your code: 0
 [32mValgrind was clean[0m
 unexpected line length in line 4
-line 4:   [31mmax(0x451215AF,0x913591AF ) is 1158813103[0m
+line 4:   [31mmax(0x451215AF, 0x913591AF ) is 1158813103[0m
 [31mIncorrect: your output did not match the expected output.[0m
 [31mfailed test case 1[0m
 Removing your main() and replacing it with our own to run more tests...
