@@ -1,6 +1,6 @@
 struct complex_num_tag {
-  double real;
-  double imag;
+  double real_part;
+  double imaginary_part;
 };
 typedef struct complex_num_tag complex_num_t;
 
