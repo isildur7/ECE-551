@@ -1,5 +1,5 @@
-Grading at 09/05/2018:19:31:14.816216
-For commit ID 7efd7db4d2ea6880434beb9c327eb583ceeba4ec
+Grading at 09/05/2018:19:40:40.033980
+For commit ID 8cb8a721aeba2879dd3cba0bd7a21f0dddb8a62f
 [32mSuccessfully compiled ['code2.c'].[0m
 Checking for 'int printTriangle(int size)'
 [32mfound 'int printTriangle(int size)' in your source code 'code2.c'[0m
@@ -9,8 +9,8 @@ Checking for 'int main(void)'
 Running original code
 Exit status of your code: 0
 [32mValgrind was clean[0m
-[31mIncorrect: your output did not match the expected output.[0m
-[31mfailed test case 1[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
 [32mSuccessfully compiled ['code2.c'].[0m
 ********************test case 2********************
 checking printTriangle(0)
@@ -61,28 +61,28 @@ Exit status of your code: 0
 [32mCorrect: your output matched the expected output.[0m
 [32mpassed test case 9[0m
 ********************test case 10********************
-checking printTriangle(114)
+checking printTriangle(101)
 Exit status of your code: 0
 [32mValgrind was clean[0m
 [32mCorrect: your output matched the expected output.[0m
 [32mpassed test case 10[0m
 ********************test case 11********************
-checking printTriangle(157)
+checking printTriangle(139)
 Exit status of your code: 0
 [32mValgrind was clean[0m
 [32mCorrect: your output matched the expected output.[0m
 [32mpassed test case 11[0m
 ********************test case 12********************
-checking printTriangle(211)
+checking printTriangle(506)
 Exit status of your code: 0
 [32mValgrind was clean[0m
 [32mCorrect: your output matched the expected output.[0m
 [32mpassed test case 12[0m
 ********************test case 13********************
-checking printTriangle(2536)
+checking printTriangle(2320)
 Exit status of your code: 0
 [32mValgrind was clean[0m
 [32mCorrect: your output matched the expected output.[0m
 [32mpassed test case 13[0m
-[31mfailed 1 out of 13 test cases[0m
-Overall Grade: B
+[32msuccessfully passed all 13 test cases[0m
+Overall Grade: A
