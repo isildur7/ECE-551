@@ -36,6 +36,7 @@ void retirement(int startAge,           //age in months when saving starts
     balance = update_balance(balance, retired);
     printf("Age %3d month %2d you have $%.2lf\n", ts / 12, ts % 12, balance);
   }
+  return;
 }
 
 int main() {
@@ -53,4 +54,5 @@ int main() {
   double Init_savings = 21345;
 
   retirement(Init_age, Init_savings, working, retired);
+  return EXIT_SUCCESS;
 }
