@@ -8,10 +8,10 @@ typedef struct retire_info_tag {
 } retire_info_t;
 
 double update_balance(double balance, retire_info_t phase) {
-  // define returns per month dividing by 12 if balance is greater than 0
+  // define returns per month dividing by 100 if balance is greater than 0
   double returns;
   if (balance > 0)
-    returns = balance * phase.rate_of_return / 1200;
+    returns = balance * phase.rate_of_return / 100;
   else
     returns = 0;
   // add contribution and interest returns
@@ -48,11 +48,11 @@ int main() {
 
   working.months = 489;
   working.contribution = 1000;
-  working.rate_of_return = 4.5;
+  working.rate_of_return = 4.5 / 12;
 
   retired.months = 384;
   retired.contribution = -4000;
-  retired.rate_of_return = 1;
+  retired.rate_of_return = 1 / 12;
 
   int Age = 327;
   double Savings = 21345;
