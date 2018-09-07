@@ -1,0 +1,21 @@
+Grading at 09/07/2018:23:11:53.226206
+For commit ID ad8ef27e1ad12ee6281dcb1e39145f013503bfe3
+Checking for 'void retirement(int startAge, double initial, retire_info_t working, retire_info_t retired)'
+[32mfound 'void retirement(int startAge, double initial, retire_info_t working, retire_info_t retired)' in your source code 'retirement.c'[0m
+[32mSuccessfully compiled ['retirement.c'].[0m
+********************test case 1********************
+Running original code
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
+Replacing your main with ours to do more testing
+retirement.c: In function ‘old_mainqRYocJ’:
+retirement.c:56:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+
+[31mError: failed to compile your code[0m
+[31mCannot continue testing[0m
+Overall Grade: F
