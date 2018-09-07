@@ -50,9 +50,9 @@ int main() {
   retired.contribution = -4000;
   retired.rate_of_return = 1;
 
-  int Init_age = 327;
-  double Init_savings = 21345;
+  int Age = 327;
+  double Savings = 21345;
 
-  retirement(Init_age, Init_savings, working, retired);
+  retirement(Age, Savings, working, retired);
   return EXIT_SUCCESS;
 }
