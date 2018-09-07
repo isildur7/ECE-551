@@ -46,16 +46,16 @@ void retirement(int startAge,           //age in months when saving starts
 int main() {
   retire_info_t working, retired;
 
-  working.months = 514;
-  working.contribution = 1234;
-  working.rate_of_return = 0.0056;
+  working.months = 489;
+  working.contribution = 1000;
+  working.rate_of_return = 4.5;
 
-  retired.months = 205;
-  retired.contribution = -6534;
-  retired.rate_of_return = 0.00079;
+  retired.months = 384;
+  retired.contribution = -4000;
+  retired.rate_of_return = 1;
 
-  int Age = 240;
-  double Savings = 0;
+  int Age = 327;
+  double Savings = 21345;
 
   retirement(Age, Savings, working, retired);
   return EXIT_SUCCESS;
