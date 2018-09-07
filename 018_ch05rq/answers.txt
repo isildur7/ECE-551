@@ -6,5 +6,5 @@ C
 B
 D
 B
-A
 D
+B
