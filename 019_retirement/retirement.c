@@ -20,23 +20,24 @@ double update_balance(double balance, retire_info_t phase) {
 void retirement(int startAge,           //age in months when saving starts
                 double initial,         //intial savings in dollars
                 retire_info_t working,  //info about working
-                retire_info_t retired)  //infor after retired
+                retire_info_t retired)  //info after retired
 {
   // set balance to initial amount of money
-  double balance = initial;
+  double current_balance = initial;
   // time step = 1 month
   int ts;
   // print initial conditions
-  printf("Age %3d month %2d you have $%.2lf\n", startAge / 12, startAge % 12, balance);
-  // start calculations at startAge, run working calculations for months in working
-  for (ts = startAge + 1; ts <= startAge + working.months; ++ts) {
-    balance = update_balance(balance, working);
-    printf("Age %3d month %2d you have $%.2lf\n", ts / 12, ts % 12, balance);
-  }
-  // now calculation for retirement
-  for (; ts < startAge + working.months + retired.months; ++ts) {
-    balance = update_balance(balance, retired);
-    printf("Age %3d month %2d you have $%.2lf\n", ts / 12, ts % 12, balance);
+  printf("Age %3d month %2d you have $%.2lf\n", startAge / 12, startAge % 12, current_balance);
+
+  for (ts = startAge + 1; ts < startAge + working.months + retired.months; ts++) {
+    // start calculations at startAge, run working calculations for months in working
+    if (ts <= startAge + working.months)
+      current_balance = update_balance(current_balance, working);
+    // now calculation for retirement
+    else
+      current_balance = update_balance(current_balance, retired);
+
+    printf("Age %3d month %2d you have $%.2lf\n", ts / 12, ts % 12, current_balance);
   }
   return;
 }
