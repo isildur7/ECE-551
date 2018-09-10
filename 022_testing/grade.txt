@@ -1,0 +1,33 @@
+Grading at 09/10/2018:01:31:50.341989
+For commit ID 489d6f9c7d1f26987b3436c41b7f18e284564761
+#################################################
+test input.1:
+Your file matched the expected output
+input.1 passed
+#################################################
+test input.2:
+Your file matched the expected output
+input.2 passed
+#################################################
+test input.3:
+I expected to find a file called 'input.3' but it did not exist
+(or was not a regular file)
+Here are the files that I can find:
+correct.txt
+imput.3
+input.1
+input.2
+input.4
+isPrime-broken1
+isPrime-broken2
+isPrime-broken3
+isPrime-broken4
+isPrime-correct
+README
+student.txt
+#################################################
+test input.4:
+Your file matched the expected output
+input.4 passed
+
+Overall Grade: B
