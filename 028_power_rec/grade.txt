@@ -1,0 +1,226 @@
+Grading at 09/13/2018:04:25:45.067502
+For commit ID cfc3304b5de81ecb7f9a0d363b34c26fa1a1b95e
+[32mSuccessfully compiled ['power.c'].[0m
+[32msuccessfully compiled code[0m
+Checking for 'unsigned-int power(unsigned-int x, unsigned-int y)'
+[32mfound 'unsigned-int power(unsigned-int x, unsigned-int y)' in your source code 'power.c'[0m
+[32mThere is no (do while for) in power.c[0m
+[32mpower in power.c is a recursive function[0m
+********************test case 1********************
+checking x = 0, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
+********************test case 2********************
+checking x = 0, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+checking x = 0, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+checking x = 0, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+checking x = 0, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 5[0m
+********************test case 6********************
+checking x = 0, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 6[0m
+********************test case 7********************
+checking x = 1, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 7[0m
+********************test case 8********************
+checking x = 1, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 8[0m
+********************test case 9********************
+checking x = 1, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 9[0m
+********************test case 10********************
+checking x = 1, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 10[0m
+********************test case 11********************
+checking x = 1, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 11[0m
+********************test case 12********************
+checking x = 1, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 12[0m
+********************test case 13********************
+checking x = 4, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 13[0m
+********************test case 14********************
+checking x = 4, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 14[0m
+********************test case 15********************
+checking x = 4, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 15[0m
+********************test case 16********************
+checking x = 4, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 16[0m
+********************test case 17********************
+checking x = 4, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 17[0m
+********************test case 18********************
+checking x = 4, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 18[0m
+********************test case 19********************
+checking x = 5, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 19[0m
+********************test case 20********************
+checking x = 5, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 20[0m
+********************test case 21********************
+checking x = 5, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 21[0m
+********************test case 22********************
+checking x = 5, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 22[0m
+********************test case 23********************
+checking x = 5, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 23[0m
+********************test case 24********************
+checking x = 5, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 24[0m
+********************test case 25********************
+checking x = 9, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 25[0m
+********************test case 26********************
+checking x = 9, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 26[0m
+********************test case 27********************
+checking x = 9, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 27[0m
+********************test case 28********************
+checking x = 9, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 28[0m
+********************test case 29********************
+checking x = 9, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 29[0m
+********************test case 30********************
+checking x = 9, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 30[0m
+********************test case 31********************
+checking x = 12, y = 0
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 31[0m
+********************test case 32********************
+checking x = 12, y = 1
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 32[0m
+********************test case 33********************
+checking x = 12, y = 2
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 33[0m
+********************test case 34********************
+checking x = 12, y = 6
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 34[0m
+********************test case 35********************
+checking x = 12, y = 8
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 35[0m
+********************test case 36********************
+checking x = 12, y = 11
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 36[0m
+[32msuccessfully passed all 36 test cases[0m
+Overall Grade: A
