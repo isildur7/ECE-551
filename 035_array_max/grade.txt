@@ -1,0 +1,31 @@
+Grading at 09/14/2018:04:24:34.907108
+For commit ID 34db718a55ed688e128b0fb693723d5ea761881f
+[32mSuccessfully compiled ['arrayMax.c'].[0m
+********************test case 1********************
+match your original code with expected ans
+Exit status of your code: 0
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
+[32mSuccessfully compiled ['arrayMax.c'].[0m
+********************test case 2********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 5[0m
+[32msuccessfully passed all 5 test cases[0m
+Overall Grade: 100
