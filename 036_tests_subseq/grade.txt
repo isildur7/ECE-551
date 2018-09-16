@@ -1,0 +1,101 @@
+Grading at 09/16/2018:21:46:30.456015
+For commit ID 38a1a69d46be800d1162ee16007c727672aa5547
+-------------------------------------
+**Testing correct implementation**
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+
+-------------------------------------
+**Testing broken implementation 10**
+SUCcess
+FailURE
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 11**
+FailURE
+FailURE
+
+-------------------------------------
+**Testing broken implementation 1**
+FailURE
+FailURE
+
+-------------------------------------
+**Testing broken implementation 2**
+SUCcess
+FailURE
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 3**
+FailURE
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 4**
+SUCcess
+SUCcess
+SUCcess
+FailURE
+SUCcess
+SUCcess
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 5**
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+FailURE
+SUCcess
+SUCcess
+SUCcess
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 6**
+SUCcess
+SUCcess
+FailURE
+SUCcess
+SUCcess
+FailURE
+
+-------------------------------------
+**Testing broken implementation 7**
+FailURE
+FailURE
+
+-------------------------------------
+**Testing broken implementation 8**
+FailURE
+FailURE
+
+-------------------------------------
+**Testing broken implementation 9**
+SUCcess
+FailURE
+SUCcess
+FailURE
+
+All test programs were handled correctly
+
+Overall Grade: PASSED
