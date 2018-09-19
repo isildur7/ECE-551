@@ -5,7 +5,7 @@
 #define NSTRS 3
 int main(void) {
   const char * strs[NSTRS] = {"apple", "bannana", "carrot"};
-  
+
   for (int i = 0; i < NSTRS; i++) {
     const char * a = strchr(strs[i], 'a');
     a++;
