@@ -16,11 +16,8 @@ int seq2(int x) {
 
 int sumSeq2(int low, int high) {
   int sum = 0;
-  if (low > high) {
+  if (low >= high) {
     return 0;
-  }
-  if (low == high) {
-    return seq2(low);
   }
   for (int i = low; i < high; i++) {
     sum += seq2(i);
@@ -36,6 +33,8 @@ int main() {
   printf("sumSeq2(%d, %d) = %d\n", -2, 6, sumSeq2(-2, 6));
   printf("sumSeq2(%d, %d) = %d\n", 0, 2, sumSeq2(0, 2));
   printf("sumSeq2(%d, %d) = %d\n", 9, 7, sumSeq2(9, 7));
-  printf("sumSeq2(%d, %d) = %d\n", 4, 4, sumSeq2(4, 4));
+  printf("sumSeq2(%d, %d) = %d\n", 4, 5, sumSeq2(4, 5));
+  printf("sumSeq2(%d, %d) = %d\n", 5, 5, sumSeq2(5, 5));
+
   return EXIT_SUCCESS;
 }

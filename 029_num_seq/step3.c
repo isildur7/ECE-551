@@ -18,7 +18,7 @@ int countEvenInSeq3Range(int xLow, int xHigh, int yLow, int yHigh) {
   int numEven = 0;
 
   if ((xLow == xHigh) && (yLow == yHigh))
-    return seq3(xLow, yLow) % 2 == 0 ? 1 : 0;
+    return 0;
 
   if (xLow == xHigh) {
     for (int j = yLow; j < yHigh; j++) {
