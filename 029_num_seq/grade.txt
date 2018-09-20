@@ -1,11 +1,10 @@
-Grading at 09/20/2018:14:36:59.067972
-For commit ID 4f30686bd6a503afe67fa980785c945158295bf9
+Grading at 09/20/2018:14:58:59.191253
+For commit ID 3e4aaebfd395092726eefe5da812150ca46b1027
 [32mSuccessfully compiled ['step1.c'].[0m
 Checking for 'int seq1(int x)'
 [32mfound 'int seq1(int x)' in your source code 'step1.c'[0m
 Checking for 'void printSeq1Range(int low, int high)'
-[31mERROR: there is no function 'void printSeq1Range(int low, int high)'
-in your source code 'step1.c'[0m
+[32mfound 'void printSeq1Range(int low, int high)' in your source code 'step1.c'[0m
 [32mno spurious debug output in step1.c[0m
 [32mSuccessfully compiled ['step2.c'].[0m
 Checking for 'int seq2(int x)'
@@ -17,7 +16,6 @@ Checking for 'int sumSeq2(int low, int high)'
 Checking for 'int seq3(int x, int y)'
 [32mfound 'int seq3(int x, int y)' in your source code 'step3.c'[0m
 Checking for 'int countEvenInSeq3Range(int xLow, int xHi, int yLow, int yHi)'
-[31mERROR: there is no function 'int countEvenInSeq3Range(int xLow, int xHi, int yLow, int yHi)'
-in your source code 'step3.c'[0m
+[32mfound 'int countEvenInSeq3Range(int xLow, int xHi, int yLow, int yHi)' in your source code 'step3.c'[0m
 [32mno spurious debug output in step3.c[0m
 Overall Grade: NO GRADE YET
