@@ -35,12 +35,12 @@ int main() {
   printf("seq1(%d) = %d\n", 9, seq1(9));
   printf("seq1(%d) = %d\n", 3, seq1(3));
   printf("printSeq1Range(%d, %d)\n", 6, 3);
-  printSeq1range(6, 3);
+  printSeq1Range(6, 3);
   printf("printSeq1Range(%d, %d)\n", -4, 4);
-  printSeq1range(-4, 4);
+  printSeq1Range(-4, 4);
   printf("printSeq1Range(%d, %d)\n", 0, 0);
-  printSeq1range(0, 0);
+  printSeq1Range(0, 0);
   printf("printSeq1Range(%d, %d)\n", 3, 10);
-  printSeq1range(3, 10);
+  printSeq1Range(3, 10);
   return EXIT_SUCCESS;
 }
