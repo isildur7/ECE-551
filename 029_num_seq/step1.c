@@ -14,7 +14,7 @@ int seq1(int x) {
   return (-3 + 4 * x);
 }
 
-void printSeq1range(int low, int high) {
+void printSeq1Range(int low, int high) {
   if (low >= high) {
     printf("\n");
     return;

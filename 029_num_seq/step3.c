@@ -14,27 +14,27 @@ int seq3(int x, int y) {
   return x * (y - 3) + y * 2;
 }
 
-int countEvenInSeq3Range(int xLow, int xHigh, int yLow, int yHigh) {
+int countEvenInSeq3Range(int xLow, int xHi, int yLow, int yHi) {
   int numEven = 0;
 
-  if ((xLow == xHigh) && (yLow == yHigh))
+  if ((xLow == xHi) && (yLow == yHi))
     return 0;
 
-  if (xLow == xHigh) {
-    for (int j = yLow; j < yHigh; j++) {
+  if (xLow == xHi) {
+    for (int j = yLow; j < yHi; j++) {
       if (seq3(xLow, j) % 2 == 0)
         numEven++;
     }
   }
-  if (yLow == yHigh) {
-    for (int j = xLow; j < xHigh; j++) {
+  if (yLow == yHi) {
+    for (int j = xLow; j < xHi; j++) {
       if (seq3(j, yLow) % 2 == 0)
         numEven++;
     }
   }
 
-  for (int i = xLow; i < xHigh; i++) {
-    for (int j = yLow; j < yHigh; j++) {
+  for (int i = xLow; i < xHi; i++) {
+    for (int j = yLow; j < yHi; j++) {
       if (seq3(i, j) % 2 == 0)
         numEven++;
     }
