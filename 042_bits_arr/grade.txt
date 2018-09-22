@@ -1,0 +1,31 @@
+Grading at 09/22/2018:03:06:54.500089
+For commit ID 06b77f660cfc69c6312b616a0734bd8f72619198
+[32mSuccessfully compiled ['numToBits.c'].[0m
+********************test case 1********************
+Exit status of your code: 0
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
+removing your main() and replacing it with out own to run more tests...
+[32mSuccessfully compiled ['numToBits.c'].[0m
+********************test case 2********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 5[0m
+[32msuccessfully passed all 5 test cases[0m
+Overall Grade: A
