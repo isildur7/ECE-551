@@ -1,5 +1,8 @@
 #include "election.h"
 //include any other headers you need here...
+#include <stdio.h>
+#include <stdlib.h
+#include <string.h>
 
 state_t parseLine(const char * line) {
   //STEP 1: write me
@@ -11,11 +14,13 @@ state_t parseLine(const char * line) {
     state.name[i] = line[i];
   }
   state.name[i] = '\0';
+  i++;
 
   for (j = 0; line[i] != ':'; j++) {
     population[j] = line[i];
   }
   population[j] = '\0';
+  i++;
   state.population = atoll(population);
 
   for (k = 0; line[i] != '\0'; k++) {
