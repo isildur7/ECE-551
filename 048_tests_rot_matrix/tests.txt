@@ -1,0 +1,19 @@
+emacs1000000000000000000000000
+
+run_all.sh
+
+
+text9.txt
+test1.txt
+test2.txt
+test3.txt
+test4.txt
+text5.txt
+text6.txt
+test7.txt
+test10.txt
+test1.txt test2.txt
+vbyav iauvuiag
+sample.txt
+testinggggg10
+sample.out
