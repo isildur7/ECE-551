@@ -97,6 +97,10 @@ unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, siz
   // where candidate wins all electoral votes and add that to his total.
   unsigned int total_electoral_votes = 0;
   for (size_t i = 0; i < nStates; i++) {
+    if (stateData[i].population < voteCounts[i]) {
+      printf("Voting more than Population. Look for them Russkies\n");
+      exit(EXIT_FAILURE);
+    }
     if (stateData[i].population / voteCounts[i] < 2) {
       total_electoral_votes += stateData[i].electoralVotes;
     }
@@ -110,6 +114,10 @@ void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
   // and print if true.
   for (size_t i = 0; i < nStates; i++) {
     float percentage = (float)voteCounts[i] / (float)stateData[i].population;
+    if (percentage > 1) {
+      printf("Voting more than Population. Look for them Russkies\n");
+      exit(EXIT_FAILURE);
+    }
     if ((percentage - 0.5 <= 0.005) && (percentage - 0.5 >= -0.005)) {
       printf("%s requires a recount (Candidate A has %.2f%% of the vote)\n",
              stateData[i].name,
@@ -127,6 +135,10 @@ void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)
   size_t whereHigh = 0;
   for (size_t i = 0; i < nStates; i++) {
     float percentage = (float)voteCounts[i] / (float)stateData[i].population;
+    if (percentage > 1) {
+      printf("Voting more than Population. Look for them Russkies\n");
+      exit(EXIT_FAILURE);
+    }
     if (percentage > high) {
       high = percentage;
       whereHigh = i;
