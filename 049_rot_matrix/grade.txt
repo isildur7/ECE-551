@@ -1,0 +1,37 @@
+Grading at 09/26/2018:02:49:23.637066
+For commit ID e1219e9a9950d3026e836593a725cfbb078a15a0
+[32mSuccessfully compiled ['rotateMatrix.c'].[0m
+********************test case 1********************
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 1[0m
+********************test case 2********************
+Exit status of your code: 0
+[31mtest case 2 Error: valgrind was not clean,here are error suggestions:[0m
+[31m1 Syscall param write(buf) points to uninitialised byte(s)[0m
+[31m2 Conditional jump or move depends on uninitialised value(s)[0m
+[31m3  Address 0x522e2f4 is 4 bytes inside a block of size 4[0m
+[31mfailed test case 2[0m
+********************test case 3********************
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 4[0m
+********************test case 5********************
+Exit status of your code: 1
+[32mValgrind was clean[0m
+[32mCorrect: your code indicates this is a failure case.[0m
+[32mpassed test case 5[0m
+********************test case 6********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 6[0m
+[31mfailed 1 out of 6 test cases[0m
+Overall Grade: C
