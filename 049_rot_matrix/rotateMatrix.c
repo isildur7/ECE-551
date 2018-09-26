@@ -7,17 +7,22 @@ void rot_matrix(FILE * f) {
   int i = 0;
   char array[MAX_SIZE][MAX_SIZE + 2];
   while (fgets(array[i], MAX_SIZE + 2, f) != NULL) {
-    if (i >= MAX_SIZE) {
-      fprintf(stderr, "more than 10 lines\n");
-      exit(EXIT_FAILURE);
-    }
     int yank = strchr(array[i], '\n') - array[i];
     if (yank != 10) {
       fprintf(stderr, "line too long\n");
       exit(EXIT_FAILURE);
     }
     i++;
+    if (i > MAX_SIZE) {
+      fprintf(stderr, "more than 10 lines\n");
+      exit(EXIT_FAILURE);
+    }
   }
+  if (i < MAX_SIZE) {
+    fprintf(stderr, "less than 10 lines\n");
+    exit(EXIT_FAILURE);
+  }
+
   char rotation[10][11];
   for (int old_i = 0; old_i < MAX_SIZE; old_i++) {
     for (int old_j = 0; old_j < MAX_SIZE; old_j++) {
