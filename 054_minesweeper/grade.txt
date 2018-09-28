@@ -1,0 +1,23 @@
+Grading at 09/28/2018:23:27:04.418356
+For commit ID 639f2f24e917885939a2f14ce7d633fce92f4ba0
+[32mSuccessfully compiled ['minesweeper.c'].[0m
+********************test case 1********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 1[0m
+********************test case 2********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 2[0m
+********************test case 3********************
+Exit status of your code: 0
+[32mValgrind was clean[0m
+[32mCorrect: your output matched the expected output.[0m
+[32mpassed test case 3[0m
+********************test case 4********************
+Exit status of your code: 134
+[31mtest case 4 Error: double free or corruption[0m
+[31mCannot continue testing[0m
+Overall Grade: F
