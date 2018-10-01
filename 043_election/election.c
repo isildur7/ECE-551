@@ -115,7 +115,7 @@ void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates) {
   for (size_t i = 0; i < nStates; i++) {
     float percentage = (float)voteCounts[i] / (float)stateData[i].population;
     if (percentage > 1) {
-      printf("Voting more than Population. Look for them Russkies\n");
+      printf("Voting more than Population. Look for them Russian Hackers.\n");
       exit(EXIT_FAILURE);
     }
     if ((percentage - 0.5 <= 0.005) && (percentage - 0.5 >= -0.005)) {
@@ -144,6 +144,11 @@ void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)
       whereHigh = i;
     }
   }
-  printf("Candidate A won %s with %.2f%% of the vote\n", stateData[whereHigh].name, high * 100);
+  if ((float)voteCounts[whereHigh] / (float)stateData[whereHigh].population > 0.5) {
+    printf("Candidate A won %s with %.2f%% of the vote\n", stateData[whereHigh].name, high * 100);
+  }
+  else {
+    printf("Bummer, this one lost everywhere\n");
+  }
   return;
 }
