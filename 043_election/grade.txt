@@ -1,11 +1,11 @@
-Grading at 09/29/2018:21:52:00.667484
-For commit ID 00a2896166e231ab88f6483b0cab021f9774bd0d
-[32mfind func state_t  parseLine(const char * line)[0m
-[32mfind func unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, size_t   nStates)[0m
-[32mfind func void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
-[32mfind func void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
+Grading at 10/01/2018:20:21:40.819034
+For commit ID 32a6f2bc92d95ed9e10a299155ef7d88ebcbc102
+[32mfound function state_t  parseLine(const char * line)[0m
+[32mfound function unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, size_t   nStates)[0m
+[32mfound function void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
+[32mfound function void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
 running passed-in stu_imp ./printStates
 [32mSuccessfully compiled .[0m
-now check if there is output in parseLine and countElectoralVotes
-[32mno spurious debug output in parseLine, countElectoralVotes[0m
+checking if there is output in parseLine and countElectoralVotes
+[32mno spurious debug output in parseLine or countElectoralVotes[0m
 Overall Grade: NO GRADE YET
