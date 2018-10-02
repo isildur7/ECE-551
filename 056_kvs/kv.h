@@ -1,6 +1,6 @@
 #ifndef __KV_H__
 #define __KV_H__
-
+#include <stdio.h>
 #include <stdlib.h>
 
 struct _kvpair_t {
@@ -16,6 +16,8 @@ struct _kvarray_t {
   size_t length;
 };
 typedef struct _kvarray_t kvarray_t;
+
+FILE * openFile(const char * filename);
 
 kvarray_t * readKVs(const char * fname);
 

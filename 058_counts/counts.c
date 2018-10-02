@@ -7,10 +7,12 @@ counts_t * createCounts(void) {
   counts_t * ctCounts = malloc(sizeof(*ctCounts));
   if (ctCounts == NULL) {
     fprintf(stderr, "Allocation unsuccessful\n");
+    exit(EXIT_FAILURE);
   }
   ctCounts->countsArray = malloc(sizeof(*ctCounts->countsArray));
   if (ctCounts->countsArray == NULL) {
     fprintf(stderr, "Allocation unsuccessful\n");
+    exit(EXIT_FAILURE);
   }
   ctCounts->length = 0;
   ctCounts->unknownFrequency = 0;
@@ -21,6 +23,10 @@ char * copyStrings(char * destination, const char * source) {
   size_t i = 0;
   while (source[i] != '\0') {
     destination = realloc(destination, (i + 2) * sizeof(*destination));
+    if (destination == NULL) {
+      fprintf(stderr, "Not enough space\n");
+      exit(EXIT_FAILURE);
+    }
     destination[i] = source[i];
     i++;
   }
@@ -34,12 +40,6 @@ void addCount(counts_t * c, const char * name) {
     c->unknownFrequency++;
   }
   else {
-    /*    if (c->length == 0) {
-      copyStrings(c->countsArray[0].string, name);
-      c->countsArray[0].frequency = 1;
-      c->length++;
-      }*/
-    //    else {
     int i = 0;
     while (i < c->length) {
       if (strcmp(c->countsArray[i].string, name) == 0) {
@@ -54,6 +54,7 @@ void addCount(counts_t * c, const char * name) {
       c->countsArray = realloc(c->countsArray, (c->length + 1) * sizeof(*c->countsArray));
       if (c->countsArray == NULL) {
         fprintf(stderr, "Not enough space\n");
+        exit(EXIT_FAILURE);
       }
       c->length++;
       c->countsArray[i].string = NULL;
