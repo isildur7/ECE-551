@@ -24,10 +24,10 @@ char * time2str(const time_t * when, long ns) {
 
 typedef struct stat stat_t;
 
-void printStats(stat_t * st, char * type, char * name, char access[]) {
-  // take the obtained stat struct from lstat, filetype,
-  // and name to print the info
-  printf("  File: ‘%s’\n", name);
+void printBasic(stat_t * st, char * type, char * name) {
+  // take the obtained stat struct from lstat, file type,
+  // and name to print the basic info
+  printf("  File: %s\n", name);
   printf("  Size: %-10lu\tBlocks: %-10lu IO Block: %-6lu %s\n",
          st->st_size,
          st->st_blocks,
@@ -38,7 +38,34 @@ void printStats(stat_t * st, char * type, char * name, char access[]) {
          st->st_dev,
          st->st_ino,
          st->st_nlink);
-  printf("Access: (%04o/%s)\n", (st->st_mode & ~S_IFMT), access);
+}
+
+void printAccess(stat_t * st, char access[]) {
+  // print access info using acess string and ids from stat struct
+  // getpwuid returns a struct, from which the username has to be the fourth conversion
+  // getpwuid(st->st_uid)->pw_name gives that
+  // Similarly for 6th conversion with getgrgid
+  printf("Access: (%04o/%s)  Uid: (%5d/%8s)   Gid: (%5d/%8s)\n",
+         (st->st_mode & ~S_IFMT),
+         access,
+         st->st_uid,
+         getpwuid(st->st_uid)->pw_name,
+         st->st_gid,
+         getgrgid(st->st_gid)->gr_name);
+}
+
+void printTime(stat_t * st) {
+  char *accesstime, *modifytime, *changetime;
+  accesstime = time2str(&st->st_atim.tv_sec, st->st_atim.tv_nsec);
+  modifytime = time2str(&st->st_mtim.tv_sec, st->st_mtim.tv_nsec);
+  changetime = time2str(&st->st_ctim.tv_sec, st->st_ctim.tv_nsec);
+  printf("Access: %s\n", accesstime);
+  printf("Modify: %s\n", modifytime);
+  printf("Change: %s\n", changetime);
+  printf(" Birth: -\n");
+  free(accesstime);
+  free(modifytime);
+  free(changetime);
 }
 
 void getAccess(stat_t * st, char * acc) {
@@ -46,19 +73,15 @@ void getAccess(stat_t * st, char * acc) {
   if (st->st_mode & S_IRUSR) {
     acc[1] = 'r';
   }
-
   if (st->st_mode & S_IWUSR) {
     acc[2] = 'w';
   }
-
   if (st->st_mode & S_IXUSR) {
     acc[3] = 'x';
   }
-
   if (st->st_mode & S_IRGRP) {
     acc[4] = 'r';
   }
-
   if (st->st_mode & S_IWGRP) {
     acc[5] = 'w';
   }
@@ -87,7 +110,7 @@ int main(int argc, char ** argv) {
 
   if (lstat(argv[1], &filestats) != 0) {
     // If lstat returns 0 it succeeds
-    perror("mystat failed! ");
+    perror("mystat: cannot mystat:");
     exit(EXIT_FAILURE);
   }
 
@@ -138,6 +161,11 @@ int main(int argc, char ** argv) {
       accString[0] = '\0';
   }
 
-  // call printStats to print results
-  printStats(&filestats, fileType, argv[1], accString);
+  // call printBasic to print basic info like name, size, owner etc
+  printBasic(&filestats, fileType, argv[1]);
+  // call printAccess to print access strings
+  printAccess(&filestats, accString);
+  // call printTime to print access,modify and change time info
+  printTime(&filestats);
+  free(fileType);
 }
