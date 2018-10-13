@@ -65,7 +65,7 @@ void printDevice(stat_t * st) {
   // prints device info obtained from the stat struct
   if (S_ISCHR(st->st_mode) || S_ISBLK(st->st_mode)) {
     // check is it is a special file and if yes, print the type identifier
-    printf("Device: %lxh/%lud\tInode: %-10lu  Links: %-5lu Device type: %d,%d\n",
+    printf("Device: %lxh/%lud\tInode: %-10lu  Links: %-5lu Device type: %x,%x\n",
            st->st_dev,
            st->st_dev,
            st->st_ino,
