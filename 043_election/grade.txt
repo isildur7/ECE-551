@@ -1,11 +1,90 @@
-Grading at 10/01/2018:20:21:40.819034
+Grading at 10/15/2018:18:58:33.852968
 For commit ID 32a6f2bc92d95ed9e10a299155ef7d88ebcbc102
-[32mfound function state_t  parseLine(const char * line)[0m
-[32mfound function unsigned int countElectoralVotes(state_t * stateData, uint64_t * voteCounts, size_t   nStates)[0m
-[32mfound function void printRecounts(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
-[32mfound function void printLargestWin(state_t * stateData, uint64_t * voteCounts, size_t nStates)[0m
-running passed-in stu_imp ./printStates
-[32mSuccessfully compiled .[0m
-checking if there is output in parseLine and countElectoralVotes
-[32mno spurious debug output in parseLine or countElectoralVotes[0m
-Overall Grade: NO GRADE YET
+Good for you: you committed election.h
+election.c exists (good)
+Starting by grading FUNCTIONALITY (90% of grade)
+Attempting to compile election.c
+rm -f *~ printStates printEVotes printRecounts printLargeWin
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printStates.o -o printStates
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printEVotes.o -o printEVotes
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printRecounts.o -o printRecounts
+gcc -ggdb3 -Wall -Werror -std=gnu99 election.c printLargeWin.o -o printLargeWin
+#################################################
+testcase1 of step1:
+testcase1 passed [1/1]
+#################################################
+testcase2 of step1:
+testcase2 passed [1/1]
+#################################################
+testcase3 of step1:
+testcase3 passed [1/1]
+#################################################
+testcase4 of step1:
+testcase4 passed [1/1]
+#################################################
+testcase5 of step1:
+Your file matched the expected output
+testcase5 passed [10/10]
+#################################################
+testcase6 of step1:
+Difficult corner cases
+Your file matched the expected output
+testcase6 passed [6/6]
+#################################################
+testcase1 of step2:
+Your output is correct [8/8]
+#################################################
+testcase2 of step2:
+Your output is correct [8/8]
+#################################################
+testcase3 of step2:
+Your output is correct [8/8]
+#################################################
+testcase4 of step2:
+Difficult corner cases
+Your file did not match the expected ouput
+Your output is incorrect [0/6]
+#################################################
+testcase1 of step3:
+Your output is correct [6/6]
+#################################################
+testcase2 of step3:
+Your output is correct [6/6]
+#################################################
+testcase3 of step3:
+Your output is correct [6/6]
+#################################################
+testcase4 of step3:
+Difficult corner cases
+Your output is correct [2/2]
+#################################################
+testcase1 of step4:
+Your output is correct [8/8]
+#################################################
+testcase2 of step4:
+Your output is correct [8/8]
+#################################################
+testcase3 of step4:
+Your output is correct [8/8]
+#################################################
+testcase4 of step4:
+Difficult corner cases
+Your output is correct [6/6]
+Functionality grade: 94 %
+This counts for 90% so you get 0.9 * 94 => 84.6 points
+--------------------------------------
+Style grade (10% of overall)
+Abstraction of finding a colon:  0 / 2
+Abstraction of converting a string to a number: 2 / 2
+Comments: 1.75 / 2
+Variable naming: 2 / 2
+Other (no global variables, no magic numbers, no strange casts etc)  2 / 2
+The comments from the  TA who graded this were:
+parseLine function is too long, could have been abstracted into smaller functions. Good variable naming, clear and consice code. Could have used library functions to make your job easier.
+-------------------------------------------------
+Style total 7.75 / 10 
+
+
+Overall grade is 84.6  + 7.75 = 92.35
+
+Overall Grade: 92.35
