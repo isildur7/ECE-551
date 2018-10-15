@@ -14,7 +14,7 @@ int main(int argc, char ** argv) {
     if (lstat(argv[i], &filestats) != 0) {
       // If lstat returns 0 it succeeds
       perror("mystat: cannot mystat");
-      exit(EXIT_FAILURE);
+      continue;
     }
 
     // string containing file access info, always 10 chars
