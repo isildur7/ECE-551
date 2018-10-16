@@ -1,0 +1,43 @@
+#include "circle.h"
+#define PI 3.1415926535
+
+Circle::Circle() : cen(), radius(1) {}
+Circle::Circle(const Point p, const double rad) : cen(p), radius(rad) {}
+
+void Circle::move(double dx, double dy) {
+  Circle::cen.move(dx, dy);
+}
+
+double mod_square_root(double A, double X) {
+  return pow((pow(A, 2) - pow(X, 2)), 0.5);
+}
+
+double calculateY(double A, double B, double d) {
+  double x = pow(A, 2) - pow(B, 2) + pow(d, 2);
+  x = x / (2 * d);
+  return mod_square_root(A, x);
+}
+
+double Circle::intersectionArea(const Circle & otherCircle) {
+  double radA = Circle::radius;
+  double radB = otherCircle.radius;
+  double dist = Circle::cen.distanceFrom(otherCircle.cen);
+
+  if (dist == 0) {
+    return PI * radA * radA;
+  }
+  if (dist >= radA + radB) {
+    return 0;
+  }
+  if (dist <= abs(radA - radB)) {
+    return PI * pow(fmin(radA, radB), 2);
+  }
+
+  double y = calculateY(radA, radB, dist);
+
+  double area = pow(radA, 2) * asin(y / radA);
+  area += pow(radB, 2) * asin(y / radB);
+  area += -y * (mod_square_root(radA, y) + mod_square_root(radB, y));
+
+  return area;
+}

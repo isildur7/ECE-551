@@ -3,7 +3,7 @@
 #include <math.h>
 
 Point ::Point() : x(0), y(0) {}
-
+Point ::Point(double x, double y) : x(x), y(y) {}
 void Point ::move(double dx, double dy) {
   Point::x += dx;
   Point::y += dy;
