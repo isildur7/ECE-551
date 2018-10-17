@@ -63,8 +63,13 @@ bool IntArray::operator==(const IntArray & rhs) const {
 }
 
 bool IntArray::operator!=(const IntArray & rhs) const {
-  if (*this == rhs) {
+  if (numElements == rhs.numElements) {
     return false;
+  }
+  for (int i = 0; i < numElements; i++) {
+    if (data[i] == rhs.data[i]) {
+      return false;
+    }
   }
   return true;
 }
