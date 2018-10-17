@@ -36,14 +36,12 @@ IntArray & IntArray::operator=(const IntArray & rhs) {
 
 const int & IntArray::operator[](int index) const {
   assert(index < numElements && index >= 0);
-  const int & ref = data[index];
-  return ref;
+  return data[index];
 }
 
 int & IntArray::operator[](int index) {
   assert(index < numElements && index >= 0);
-  int & ref = data[index];
-  return ref;
+  return data[index];
 }
 
 int IntArray::size() const {

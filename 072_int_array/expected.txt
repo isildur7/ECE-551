@@ -7,4 +7,5 @@ The two int arrays are different
 {0, 1, 4, 9, 16}
 {}
 16
+1
 assert fails

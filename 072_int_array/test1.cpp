@@ -8,9 +8,9 @@ int main(void) {
   for (int i = 0; i < intArray.size(); i++) {
     intArray[i] = i * i;
   }
-
   IntArray intArray2(intArray);
-  IntArray intArray3(0), intArray4;
+  IntArray intArray3(0), intArray4, intArray5(1);
+  intArray5[0] = 1;
 
   if (intArray != intArray2) {
     std::cout << "The two int arrays are not the same\n";
@@ -47,5 +47,8 @@ int main(void) {
   }
   std::cout << intArray3 << "\n" << intArray2 << std::endl;
   std::cout << intArray[4] << "\n";
+  std::cout << intArray5 << std::endl;
+  intArray5[1] = 0;
+  std::cout << intArray5 << std::endl;
   std::cout << intArray2[1] << std::endl;
 }
