@@ -76,9 +76,9 @@ std::ostream & operator<<(std::ostream & s, const IntArray & rhs) {
   // if (rhs.size() != 0) {
   s.write("{", 1);
   for (int i = 0; i < rhs.size(); i++) {
-    char asString[sizeof(rhs[i])];
-    snprintf(asString, sizeof(rhs[i]), "%d", rhs[i]);
-    s.write(asString, strlen(asString));
+    //char asString[sizeof(rhs[i])];
+    // snprintf(asString, sizeof(rhs[i]), "%d", rhs[i]);
+    s << rhs[i];
     if (i != rhs.size() - 1) {
       s.write(", ", 2);
     }
