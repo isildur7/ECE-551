@@ -1,10 +1,10 @@
 #include "IntMatrix.h"
 
 int main(void) {
-  IntMatrix a(4,5);
+  IntMatrix a(4, 5);
   for (int i = 0; i < a.getRows(); i++) {
     for (int j = 0; j < a.getColumns(); j++) {
-      a[i][j] = i+j;
+      a[i][j] = i + j;
     }
   }
   std::cout << "a is:\n" << a << std::endl;
@@ -18,7 +18,7 @@ int main(void) {
   }
   for (int i = 0; i < b.getRows(); i++) {
     for (int j = 0; j < b.getColumns(); j++) {
-      b[i][j] += i*j;
+      b[i][j] += i * j;
     }
   }
   std::cout << "Now, b is:\n" << b << std::endl;
@@ -33,5 +33,7 @@ int main(void) {
   std::cout << "c is:\n" << c << std::endl;
   c = a + b;
   std::cout << "Now, c is:\n" << c << std::endl;
+  // IntMatrix d(3, 0);
+  // std::cout << "d:\n" << d << std::endl;
   return EXIT_SUCCESS;
 }
