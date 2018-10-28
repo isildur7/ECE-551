@@ -6,6 +6,6 @@ B
 A
 C
 A
-B
+A
 B
 A
