@@ -82,7 +82,7 @@ class LinkedList
   }
 
   const T & operator[](int index) const {
-    if (index > 0 && index < size) {
+    if (index >= 0 && index < size) {
       Node * curr = head;
       for (int i = 0; i < index; i++) {
         curr = curr->next;
