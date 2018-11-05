@@ -1,0 +1,44 @@
+Grading at 11/05/2018:21:07:53.931719
+For commit ID 54971b9884a0c3a285a70942713bbd71b0886701
+**Testing broken implementation 1 **
+-------------------------------------
+
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+In constrise c = -2 != expected = -3
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+In constrise c = -1 != expected = 0
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+In constfunc c = 5 != expected = 3
+
+**Testing correct implementation **
+-------------------------------------
+
+
+Your tests identified the problems with all broken programs
+
+Overall Grade: PASSED
