@@ -1,4 +1,24 @@
+#include <cassert>
 #include <cstdlib>
+#include <exception>
+#include <stdexcept>
+
+#include "il.h"
+
+void testList(void) {
+  IntList l = IntList();
+  try {
+    l[0];  //out of range should happen
+    assert(false);
+  }
+  catch (std::exception &) {
+  }
+}
+int main(void) {
+  testList();
+  return EXIT_SUCCESS;
+}
+/*#include <cstdlib>
 #include <iostream>
 
 #include "il.h"
@@ -137,4 +157,4 @@ void testList(void) {
     exit(EXIT_FAILURE);
   if (b.head->next != b.tail->prev)
     exit(EXIT_FAILURE);
-}
+    }*/

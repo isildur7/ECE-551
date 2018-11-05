@@ -4,7 +4,7 @@ vg="valgrind --leak-check=full --log-file=vg.log --error-exitcode=33"
 
 echo "**Testing correct implementation **"
 echo "-----------------------------------"
-g++ -o test-lls test-lls.cpp /usr/local/ece551/lls/il.o
+g++ -o test-lls -g test-lls.cpp /usr/local/ece551/lls/il.o
 if [ "$?" != "0" ]
 then
     echo "Could not compile test-lls.cpp with il.o" 1>&2
