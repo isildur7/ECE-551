@@ -29,10 +29,10 @@ class BstMap : public Map<K, V>
     if (ptr == NULL) {
       ptr = new Node(key, value, papa);
     }
-    else if (ptr->key > key) {
+    else if (ptr->key < key) {
       ptr->right = add(key, value, ptr->right, ptr);
     }
-    else if (ptr->key < key) {
+    else if (ptr->key > key) {
       ptr->left = add(key, value, ptr->left, ptr);
     }
     else {
@@ -62,36 +62,6 @@ class BstMap : public Map<K, V>
       delete ptr;
     }
   }
-
- public:
-  BstMap() : size(0), root(NULL){};
-
-  virtual void add(const K & key, const V & value) { root = add(key, value, root, NULL); }
-
-  virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
-    Node * curr = root;
-    while (curr != NULL) {
-      if (key == curr->key) {
-        return curr->val;
-      }
-      else if (key < curr->key) {
-        curr = curr->right;
-      }
-      else {
-        curr = curr->left;
-      }
-    }
-    throw std::invalid_argument("key does not exist");
-  }
-  //Remove
-  Node * maxleft(Node * curr) {
-    while (curr->right != NULL) {
-      curr = curr->right;
-    }
-    return curr;
-  }
-
-  virtual void remove(const K & key) { root = remove(root, key); }
 
   Node * remove(Node * current, const K & key) {
     if (current == NULL) {
@@ -127,6 +97,36 @@ class BstMap : public Map<K, V>
     }
     return current;
   }
+
+  Node * maxleft(Node * curr) {
+    while (curr->right != NULL) {
+      curr = curr->right;
+    }
+    return curr;
+  }
+
+ public:
+  BstMap() : size(0), root(NULL){};
+
+  virtual void add(const K & key, const V & value) { root = add(key, value, root, NULL); }
+
+  virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
+    Node * curr = root;
+    while (curr != NULL) {
+      if (key == curr->key) {
+        return curr->val;
+      }
+      else if (key > curr->key) {
+        curr = curr->right;
+      }
+      else {
+        curr = curr->left;
+      }
+    }
+    throw std::invalid_argument("key does not exist");
+  }
+
+  virtual void remove(const K & key) { root = remove(root, key); }
 
   ~BstMap() { deleteMap(root); }
 
