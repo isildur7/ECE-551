@@ -16,5 +16,6 @@ int main(void) {
   std::cout << a.lookup(56) << std::endl;
   // std::cout << a.lookup(52) << std::endl;
   a.remove(49);
+  a = b;
   a.printTree();
 }
