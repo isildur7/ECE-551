@@ -128,7 +128,7 @@ class BstMap : public Map<K, V>
 
   virtual void remove(const K & key) { root = remove(root, key); }
 
-  ~BstMap() { deleteMap(root); }
+  virtual ~BstMap() { deleteMap(root); }
 
   void printTree() {
     printTree(root);
