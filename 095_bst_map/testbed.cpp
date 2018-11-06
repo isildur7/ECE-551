@@ -11,6 +11,8 @@ int main(void) {
   a.add(49, 6);
   a.add(67, 7);
   a.add(4, 8);
+  BstMap<int, int> b(a);
+  b.printTree();
   std::cout << a.lookup(56) << std::endl;
   // std::cout << a.lookup(52) << std::endl;
   a.remove(49);
