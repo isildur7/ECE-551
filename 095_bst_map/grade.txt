@@ -1,121 +1,67 @@
-Grading at 11/06/2018:22:33:39.071366
-For commit ID 66abd3232a60a51f0500f946093ef6746b926688
+Grading at 11/06/2018:22:44:59.483493
+For commit ID e7bc4244e392be19085767b36087d56391ec23ef
 -----------------------------------------------
 testcase 1 : Testing with BstMap<int,int>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = int]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<int, int>&’ to ‘const BstMap<int, int>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = int; V = int]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with BstMap<int,std::string>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = std::__cxx11::basic_string<char>]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<int, std::__cxx11::basic_string<char> >&’ to ‘const BstMap<int, std::__cxx11::basic_string<char> >’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = int; V = std::__cxx11::basic_string<char>]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with BstMap<int,(a custom class we wrote)>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = int; V = Tester]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<int, Tester>&’ to ‘const BstMap<int, Tester>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = int; V = Tester]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 4 : Testing with BstMap<std::string,int>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<std::__cxx11::basic_string<char>, int>&’ to ‘const BstMap<std::__cxx11::basic_string<char>, int>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = int]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 5 : Testing with BstMap<std::string,std::string>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >&’ to ‘const BstMap<std::__cxx11::basic_string<char>, std::__cxx11::basic_string<char> >’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = std::__cxx11::basic_string<char>]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 6 : Testing with BstMap<std::string,(a custom class we wrote)>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = Tester]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<std::__cxx11::basic_string<char>, Tester>&’ to ‘const BstMap<std::__cxx11::basic_string<char>, Tester>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = std::__cxx11::basic_string<char>; V = Tester]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 7 : Testing with BstMap<(a custom class we wrote),int>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = int]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<Tester, int>&’ to ‘const BstMap<Tester, int>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = Tester; V = int]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 8 : Testing with BstMap<(a custom class we wrote),std::string>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = std::__cxx11::basic_string<char>]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<Tester, std::__cxx11::basic_string<char> >&’ to ‘const BstMap<Tester, std::__cxx11::basic_string<char> >’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = Tester; V = std::__cxx11::basic_string<char>]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 9 : Testing with BstMap<(a custom class we wrote),(a custom class we wrote)>
 ...compiling...
-In file included from 89-tester.cpp:1:0:
-bstmap.h: In instantiation of ‘BstMap<K, V>& BstMap<K, V>::operator=(const BstMap<K, V>&) [with K = Tester; V = Tester]’:
-89-tester.cpp:131:10:   required from here
-bstmap.h:123:18: error: binding reference of type ‘BstMap<Tester, Tester>&’ to ‘const BstMap<Tester, Tester>’ discards qualifiers
-     BstMap<K, V> temp(rhs);
-                  ^~~~
-bstmap.h:120:3: note:   initializing argument 1 of ‘BstMap<K, V>::BstMap(BstMap<K, V>&) [with K = Tester; V = Tester]’
-   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
-   ^~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
