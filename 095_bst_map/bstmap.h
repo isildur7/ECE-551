@@ -119,9 +119,10 @@ class BstMap : public Map<K, V>
   BstMap() : size(0), root(NULL){};
   BstMap(BstMap<K, V> & rhs) : size(0), root(NULL) { root = copy(root, rhs.root); }
 
-  BstMap<K, V> operator&=(const BstMap<K, V> & rhs) {
+  BstMap<K, V> & operator=(const BstMap<K, V> & rhs) {
     BstMap<K, V> temp(rhs);
     deleteMap(root);
+    root = NULL;
     std::swap(*this, temp);
     return *this;
   }
