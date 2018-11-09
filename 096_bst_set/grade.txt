@@ -1,0 +1,28 @@
+Grading at 11/09/2018:01:45:20.557762
+For commit ID dedac43db2bbabbec310ecd354b02a1eb3bd7434
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
+ #include "bstset.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
+ #include "bstset.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
+ #include "bstset.h"
+          ^~~~~~~~~~
+compilation terminated.
+The code did not compile.  This test failed.
+
+Overall Grade: F
