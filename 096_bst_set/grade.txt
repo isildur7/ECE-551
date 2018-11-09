@@ -1,73 +1,25 @@
-Grading at 11/09/2018:02:07:55.354087
-For commit ID ed56422bf280c116d7d4ad4e5e80e5b41505fd55
+Grading at 11/09/2018:02:12:40.849410
+For commit ID b89e468c70c7764f7e01a5a51a47166cef6ccf2d
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = int]’:
-bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = int]’
-90-tester.cpp:92:36:   required from here
-bstset.h:98:12: error: ‘class BstSet<int>::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-       ~~~~~^~~
-bstset.h:98:23: error: ‘class BstSet<int>::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-                  ~~~~~^~~
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = int]’:
-bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = int]’
-90-tester.cpp:176:1:   required from here
-bstset.h:87:18: error: ‘class BstSet<int>::Node’ has no member named ‘val’
-         current->val = temp->val;
-         ~~~~~~~~~^~~
-bstset.h:87:30: error: ‘class BstSet<int>::Node’ has no member named ‘val’
-         current->val = temp->val;
-                        ~~~~~~^~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = std::__cxx11::basic_string<char>]’:
-bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = std::__cxx11::basic_string<char>]’
-90-tester.cpp:92:36:   required from here
-bstset.h:98:12: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-       ~~~~~^~~
-bstset.h:98:23: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-                  ~~~~~^~~
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = std::__cxx11::basic_string<char>]’:
-bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = std::__cxx11::basic_string<char>]’
-90-tester.cpp:176:1:   required from here
-bstset.h:87:18: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
-         current->val = temp->val;
-         ~~~~~~~~~^~~
-bstset.h:87:30: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
-         current->val = temp->val;
-                        ~~~~~~^~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-In file included from 90-tester.cpp:1:0:
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = Tester]’:
-bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = Tester]’
-90-tester.cpp:92:36:   required from here
-bstset.h:98:12: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-       ~~~~~^~~
-bstset.h:98:23: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
-       ptr->val = rhs->val;
-                  ~~~~~^~~
-bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = Tester]’:
-bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = Tester]’
-90-tester.cpp:176:1:   required from here
-bstset.h:87:18: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
-         current->val = temp->val;
-         ~~~~~~~~~^~~
-bstset.h:87:30: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
-         current->val = temp->val;
-                        ~~~~~~^~~
-The code did not compile.  This test failed.
+The code compiled.
+  - Valgrind was clean (no errors, no memory leaks)
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
