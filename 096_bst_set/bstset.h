@@ -84,7 +84,6 @@ class BstSet : public Set<K>
       else {
         Node * temp = maxleft(current->left);
         current->key = temp->key;
-        current->val = temp->val;
         current->left = remove(current->left, temp->key);
       }
     }
@@ -95,7 +94,6 @@ class BstSet : public Set<K>
     if (rhs != NULL) {
       ptr = new Node;
       ptr->key = rhs->key;
-      ptr->val = rhs->val;
       ptr->left = copy(ptr->left, rhs->left);
       ptr->right = copy(ptr->left, rhs->right);
       return ptr;
