@@ -1,28 +1,73 @@
-Grading at 11/09/2018:01:45:20.557762
-For commit ID dedac43db2bbabbec310ecd354b02a1eb3bd7434
+Grading at 11/09/2018:02:07:55.354087
+For commit ID ed56422bf280c116d7d4ad4e5e80e5b41505fd55
 -----------------------------------------------
 testcase 1 : Testing with BstSet<int>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+In file included from 90-tester.cpp:1:0:
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = int]’:
+bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = int]’
+90-tester.cpp:92:36:   required from here
+bstset.h:98:12: error: ‘class BstSet<int>::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+       ~~~~~^~~
+bstset.h:98:23: error: ‘class BstSet<int>::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+                  ~~~~~^~~
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = int]’:
+bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = int]’
+90-tester.cpp:176:1:   required from here
+bstset.h:87:18: error: ‘class BstSet<int>::Node’ has no member named ‘val’
+         current->val = temp->val;
+         ~~~~~~~~~^~~
+bstset.h:87:30: error: ‘class BstSet<int>::Node’ has no member named ‘val’
+         current->val = temp->val;
+                        ~~~~~~^~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 2 : Testing with BstSet<std::string>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+In file included from 90-tester.cpp:1:0:
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = std::__cxx11::basic_string<char>]’:
+bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = std::__cxx11::basic_string<char>]’
+90-tester.cpp:92:36:   required from here
+bstset.h:98:12: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+       ~~~~~^~~
+bstset.h:98:23: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+                  ~~~~~^~~
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = std::__cxx11::basic_string<char>]’:
+bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = std::__cxx11::basic_string<char>]’
+90-tester.cpp:176:1:   required from here
+bstset.h:87:18: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
+         current->val = temp->val;
+         ~~~~~~~~~^~~
+bstset.h:87:30: error: ‘class BstSet<std::__cxx11::basic_string<char> >::Node’ has no member named ‘val’
+         current->val = temp->val;
+                        ~~~~~~^~~
 The code did not compile.  This test failed.
 -----------------------------------------------
 testcase 3 : Testing with BstSet<(a custom class we wrote)>
 ...compiling...
-90-tester.cpp:1:10: fatal error: bstset.h: No such file or directory
- #include "bstset.h"
-          ^~~~~~~~~~
-compilation terminated.
+In file included from 90-tester.cpp:1:0:
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::copy(BstSet<K>::Node*, BstSet<K>::Node*) [with K = Tester]’:
+bstset.h:115:62:   required from ‘BstSet<K>::BstSet(const BstSet<K>&) [with K = Tester]’
+90-tester.cpp:92:36:   required from here
+bstset.h:98:12: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+       ~~~~~^~~
+bstset.h:98:23: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
+       ptr->val = rhs->val;
+                  ~~~~~^~~
+bstset.h: In instantiation of ‘BstSet<K>::Node* BstSet<K>::remove(BstSet<K>::Node*, const K&) [with K = Tester]’:
+bstset.h:143:53:   required from ‘void BstSet<K>::remove(const K&) [with K = Tester]’
+90-tester.cpp:176:1:   required from here
+bstset.h:87:18: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
+         current->val = temp->val;
+         ~~~~~~~~~^~~
+bstset.h:87:30: error: ‘class BstSet<Tester>::Node’ has no member named ‘val’
+         current->val = temp->val;
+                        ~~~~~~^~~
 The code did not compile.  This test failed.
 
 Overall Grade: F
