@@ -1,6 +1,6 @@
-Grading at 11/10/2018:04:52:09.253899
-For commit ID 73c4e900da811a66f729a291e9ab12c190f9497e
+Grading at 11/10/2018:05:04:47.831468
+For commit ID fce203efed87be1bfa1448ffe8f870174a7c229c
 Reading your quiz answers from answers.txt
-You have 2 wrong answers
+Your quiz answers are correct
 
-Overall Grade: FAILED
+Overall Grade: PASSED
