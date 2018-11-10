@@ -1,7 +1,7 @@
-Grading at 11/10/2018:22:02:56.092740
+Grading at 11/10/2018:22:55:33.497280
 For commit ID f5574770c7b7f949c45f51d0668d1f0879386b3d
 Attempting to compile mystat.c
-/tmp/ccFn37z5.o: In function `main':
+/tmp/ccBE8flY.o: In function `main':
 mystat.c:(.text+0xc4): undefined reference to `getAccess'
 mystat.c:(.text+0x21f): undefined reference to `printBasic'
 mystat.c:(.text+0x22e): undefined reference to `printDevice'
@@ -439,6 +439,6 @@ Note from the grader:
 Great comments, very thorough! Good abstraction, made code very easy to read and understand.
 Total points 9 / 9 = 100.00 % 
  -> This is 15% of your overall grade on this assignment
-Total: 0.85 * 84.15 + 0.15 * 100.00=86.52
+Total: 0.85 * 99 + 0.15 * 100.00=99.15
 
-Overall Grade: 86.52
+Overall Grade: 99.15
