@@ -79,9 +79,9 @@ void hashAndAddFiles(std::vector<std::string> files) {
         map.insert(newfile);
       }
       else {
-        std::cout << "#Removing " << *ptr << " (duplicate of\n";
+        std::cout << "#Removing " << *ptr << " (duplicate of";
         std::cout << (*got).second << ")." << std::endl;
-        std::cout << "rm " << *ptr << std::endl;
+        std::cout << "\nrm " << *ptr << std::endl;
       }
     }
     else {
