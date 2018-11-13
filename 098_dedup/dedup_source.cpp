@@ -76,7 +76,7 @@ void hashAndAddFiles(std::vector<std::string> files) {
           map.find(contents);
       if (got == map.end()) {
         std::pair<std::string, std::string> newfile(contents, *ptr);
-        map.insert(newfile);
+        map[contents] = *ptr;
       }
       else {
         std::cout << "#Removing " << *ptr << " (duplicate of";
