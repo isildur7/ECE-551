@@ -15,11 +15,11 @@ std::vector<std::string> getFile(std::string path) {
   char convPath[1024];
   std::vector<std::string> files;
   std::strcpy(convPath, path.c_str());
-  if ((dir = opendir(convPath)) != NULL) {
-    while ((dirf = readdir(dir)) != NULL) {
+  if ((dir = opendir(convPath))) {
+    while ((dirf = readdir(dir)) != 0) {
       if (dirf->d_type == DT_REG) {
         std::string name = path;
-        if (*(name.end()) != '/') {
+        if (*(--name.end()) != '/') {
           name.append("/");
         }
         name.append(dirf->d_name);
@@ -31,7 +31,7 @@ std::vector<std::string> getFile(std::string path) {
         }
         else {
           std::string name = path;
-          if (*(name.end()) != '/') {
+          if (*(--name.end()) != '/') {
             name.append("/");
           }
           name.append(dirf->d_name);
@@ -75,7 +75,7 @@ void hashAndAddFiles(std::vector<std::string> files) {
       std::unordered_map<std::string, std::string, std::hash<std::string> >::const_iterator got =
           map.find(contents);
       if (got == map.end()) {
-        std::pair<std::string, std::string> newfile(contents, *ptr);
+        // std::pair<std::string, std::string> newfile(contents, *ptr);
         map[contents] = *ptr;
       }
       else {
@@ -102,8 +102,8 @@ int main(int argc, char * argv[]) {
     exit(EXIT_FAILURE);
   }
   std::cout << "#!/bin/bash\n";
-  for (int i = 0; i < argc; i++) {
-    std::vector<std::string> fileVec = getFile(argv[1]);
+  for (int i = 1; i < argc; i++) {
+    std::vector<std::string> fileVec = getFile(argv[i]);
     hashAndAddFiles(fileVec);
   }
 }
