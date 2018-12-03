@@ -17,7 +17,7 @@ int main(void) {
   //sffc  tester = "define (g   e$ z) = (+ e (f z 1 4.242))";
   //  tester = tester.substr(6);
   // parse_define(tester, fmap);
-  tester = "(f 16 9 (g 5 9)) 12";
+  tester = "   (f 16 9 (g 5 9))     12  #comments ho    ";
   //  tester = "(f 36) 6";
   //std::string::iterator it = tester.begin();
   parse_test(tester, fmap);

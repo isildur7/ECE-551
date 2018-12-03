@@ -251,9 +251,8 @@ Expression * buildExpression(std::string::iterator & it, std::string & fName, fu
 
 void parse_define(std::string & in, funcmap_t & funcmap) {
   // Assumes that define command has been removed already
-  // First remove the comments
-  size_t hash_pos = in.find('#');
-  in = in.substr(0, hash_pos);
+  // First remove the comments and additional spaces
+  in = removeExtraSpaces(in);
   // Then, check if = is present
   size_t equal_pos = in.find('=');
   if (equal_pos == std::string::npos) {
@@ -262,6 +261,7 @@ void parse_define(std::string & in, funcmap_t & funcmap) {
   }
   // Now, cut the string upto the point of eqaulity operator
   std::string definition = in.substr(0, equal_pos);
+  definition = removeExtraSpaces(definition);
   // Once done that, get the actual definition of the function
   // and put it in the map and get back the name of the function
   std::string name = functionDefinition(definition, funcmap);

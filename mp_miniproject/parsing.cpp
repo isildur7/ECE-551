@@ -63,3 +63,16 @@ double strtod_wrapper(std::string input) {
   // No need?
   return num;
 }
+
+std::string removeExtraSpaces(std::string input) {
+  // remove whitespaces at the front and back and
+  // also remove comments, everything after #
+  size_t begin = input.find_first_not_of(" \t\n");
+  size_t com = input.find('#');
+  if (com != std::string::npos) {
+    input = input.substr(begin, com - begin);
+    begin = 0;
+  }
+  size_t end = input.find_last_not_of(" \t\n");
+  return input.substr(begin, end - begin + 1);
+}
