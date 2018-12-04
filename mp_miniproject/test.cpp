@@ -39,8 +39,7 @@ double evaluate_operation(std::string::iterator & it, std::string & name, funcma
 }
 
 double parse_operation(std::string::iterator & it, funcmap_t & funcmap) {
-  // Gets in an iterator, spits out an argument vector which can be given to
-  // Expression->evaluate() hopefully
+  // Gets in an iterator, finds the function, evaluates it and gives the result
   //----------------------------------
   // ADD THE COMMENTS FOR THIS SECTION
   //----------------------------------

@@ -14,4 +14,6 @@ bool isValidFunction(std::string & op, funcmap_t & funcmap);
 double strtod_wrapper(std::string input);
 std::string getNextString(std::string::iterator & it);
 std::string removeExtraSpaces(std::string input);
+long strtol_wrapper(std::string input);
+
 #endif

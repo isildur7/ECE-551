@@ -58,9 +58,6 @@ double strtod_wrapper(std::string input) {
     std::cerr << "Error: Could not parse Expression\n";
     exit(EXIT_FAILURE);
   }
-  // advance iterator
-  // it = it + (endp - input.c_str() + 1);
-  // No need?
   return num;
 }
 
@@ -75,4 +72,14 @@ std::string removeExtraSpaces(std::string input) {
   }
   size_t end = input.find_last_not_of(" \t\n");
   return input.substr(begin, end - begin + 1);
+}
+
+long strtol_wrapper(std::string input) {
+  char * endp;
+  long num = strtol(input.c_str(), &endp, 10);
+  if (input.c_str() == endp) {
+    std::cerr << "Error: Expected a number but found " << input << std::endl;
+    exit(EXIT_FAILURE);
+  }
+  return num;
 }

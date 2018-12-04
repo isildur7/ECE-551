@@ -32,6 +32,13 @@ std::vector<std::string> getIDs(std::string & define) {
       temp.push_back(*it);
       ++it;
     }
+
+    for (size_t i = 0; i < identifier.size(); i++) {
+      if (temp == identifier[i]) {
+        std::cerr << "Error: Identifier '" << temp << "' used more than once\n";
+        exit(EXIT_FAILURE);
+      }
+    }
     identifier.push_back(temp);
   }
   if (identifier.empty()) {

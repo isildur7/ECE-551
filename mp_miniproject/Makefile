@@ -1,10 +1,10 @@
-SOURCES=testprog.cpp parsing.cpp define.cpp test.cpp
+SOURCES=testprog.cpp parsing.cpp define.cpp test.cpp numint.cpp mcint.cpp
 OBJS=$(patsubst %.cpp, %.o, $(SOURCES))
 CPPFLAGS=-ggdb3 -Wall -Werror -pedantic -std=gnu++98
 
 test: $(OBJS)
 	g++ $(CPPFLAGS) -o test $(OBJS)
-%.o: %.cpp parsing.h define.h expressions.h test.h
+%.o: %.cpp parsing.h define.h expressions.h test.h numint.h mcint.h
 	g++ $(CPPFLAGS) -c $<
 
 clean:
