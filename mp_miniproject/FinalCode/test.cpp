@@ -12,7 +12,10 @@ double evaluate_operation(std::string::iterator & it, std::string & name, funcma
   std::vector<double> argVector;
   while (*it != ')') {
     skipSpaces(it);
-    if (*it == '\0' || *it == '#') {
+    if (*it == ')') {
+      continue;
+    }
+    else if (*it == '\0' || *it == '#') {
       std::cerr << "Error: End of line found mid-expression\n";
       exit(EXIT_FAILURE);
     }
@@ -87,7 +90,33 @@ size_t get_break_point(std::string & in) {
   }
 }
 
-void parse_test(std::string input, funcmap_t funcmap) {
+std::string Formatter(std::string input) {
+  // formats the string for output print
+  // pretty much hardcoded
+  std::string::iterator it = input.begin();
+  std::string output;
+  skipSpaces(it);
+  while (it != input.end()) {
+    if (*it == '(') {
+      output.push_back('(');
+      ++it;
+      skipSpaces(it);
+    }
+    else if (*it == ' ' || *it == '\t') {
+      skipSpaces(it);
+      if (*it != ')') {
+        output.push_back(' ');
+      }
+    }
+    else {
+      output.push_back(*it);
+      ++it;
+    }
+  }
+  return output;
+}
+
+void parse_test(std::string & input, funcmap_t & funcmap) {
   size_t brk = get_break_point(input);
   std::string left = removeExtraSpaces(input.substr(0, brk));
   std::string right = removeExtraSpaces(input.substr(brk, std::string::npos));
@@ -95,6 +124,8 @@ void parse_test(std::string input, funcmap_t funcmap) {
   std::string::iterator rit = right.begin();
   double lvalue = parse_operation(lit, funcmap);
   double rvalue = parse_operation(rit, funcmap);
+  left = Formatter(left);
+  right = Formatter(right);
   if (std::abs(lvalue - rvalue) <= 0.0000000000001) {
     std::cout << left << " = " << right << " [correct]\n";
   }

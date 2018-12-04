@@ -1,6 +1,6 @@
 SOURCES=main.cpp parsing.cpp define.cpp test.cpp numint.cpp mcint.cpp
 OBJS=$(patsubst %.cpp, %.o, $(SOURCES))
-CPPFLAGS=-ggdb3 -Wall -Werror -pedantic -std=gnu++98
+CPPFLAGS=-ggdb3 -Wall -Werror -pedantic -std=gnu++03
 
 test: $(OBJS)
 	g++ $(CPPFLAGS) -o numerics $(OBJS)
@@ -8,7 +8,7 @@ test: $(OBJS)
 	g++ $(CPPFLAGS) -c $<
 
 clean:
-	rm test *~ *.o
+	rm numerics *~ *.o
 
 
 

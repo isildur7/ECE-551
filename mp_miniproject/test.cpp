@@ -87,7 +87,7 @@ size_t get_break_point(std::string & in) {
   }
 }
 
-void parse_test(std::string input, funcmap_t funcmap) {
+void parse_test(std::string & input, funcmap_t & funcmap) {
   size_t brk = get_break_point(input);
   std::string left = removeExtraSpaces(input.substr(0, brk));
   std::string right = removeExtraSpaces(input.substr(brk, std::string::npos));
