@@ -1,0 +1,2 @@
+define (f x y) = (* x y)
+define (h i j) = (+ i (f j 8 9))

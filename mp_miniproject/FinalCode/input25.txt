@@ -1,0 +1,2 @@
+define (f x) = 0
+test (f 7 (* 0 9)

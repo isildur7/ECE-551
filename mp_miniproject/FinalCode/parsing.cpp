@@ -3,10 +3,23 @@
 void skipSpaces(std::string::iterator & it) {
   // Inspired from code in 83, takes in a string iterator
   // and increments it till a non space character is reached
-  while (*it == ' ' || *it == '\t') {
+  while (*it == ' ' || *it == '\t' || *it == '\n') {
     ++it;
   }
   return;
+}
+
+void CheckChar(std::string::iterator & it) {
+  if (*it != '\0') {
+    // if not already at the end
+    ++it;
+    // check if there is any extra characters other than spaces
+    skipSpaces(it);
+    if (*it != '\0') {
+      std::cerr << "Error: Extra symbols found after last ')' in test\n";
+      exit(EXIT_FAILURE);
+    }
+  }
 }
 
 bool isValidUnOp(std::string & op) {
@@ -50,14 +63,34 @@ std::string getNextString(std::string::iterator & it) {
   return buffer;
 }
 
+std::string getNextStringNum(std::string::iterator & it) {
+  std::string buffer;
+  while (*it != '(' && *it != ' ' && *it != ')' && *it != '\t' && *it != '\n' && *it != '\0') {
+    if (isdigit(*it) || *it == '.' || *it == '+' || *it == '-') {
+      buffer.push_back(*it);
+      ++it;
+    }
+    else {
+      std::cerr << "Error: Expected a Number, found '" << *it << "'\n";
+      exit(EXIT_FAILURE);
+    }
+  }
+  return buffer;
+}
+
 double strtod_wrapper(std::string input) {
   char * endp;
   double num = strtod(input.c_str(), &endp);
   if (input.c_str() == endp) {
-    std::cerr << "Error: Expected a number or variable but found " << input << std::endl;
+    std::cerr << "Error: Expected a number or variable\n";
     std::cerr << "Error: Could not parse Expression\n";
     exit(EXIT_FAILURE);
   }
+  if ((endp - input.c_str()) != (unsigned)input.length()) {
+    std::cout << "Error: Expected a number found " << input << std::endl;
+    exit(EXIT_FAILURE);
+  }
+
   return num;
 }
 
@@ -78,7 +111,11 @@ long strtol_wrapper(std::string input) {
   char * endp;
   long num = strtol(input.c_str(), &endp, 10);
   if (input.c_str() == endp) {
-    std::cerr << "Error: Expected a number but found " << input << std::endl;
+    std::cerr << "Error: Expected a number but found '" << input << "'\n";
+    exit(EXIT_FAILURE);
+  }
+  if ((endp - input.c_str()) != (unsigned)input.length()) {
+    std::cout << "Error: Expected a number found " << input << std::endl;
     exit(EXIT_FAILURE);
   }
   return num;

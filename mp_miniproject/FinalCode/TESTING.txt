@@ -1,0 +1,271 @@
+(1) run ./numerics < testing/input1.txt
+    You would see:
+    Error! could not get any IDs
+    Reason:
+    Command was define (f), cannot define a function with 0 variables
+
+
+(2) run ./numerics < testing/input2.txt
+    You would see:
+    Successfully defined (f x)
+    (f 3) = 2 [correct]
+    Successfully defined (f x y)
+    (f 4 2) = (+ 2 6) [correct]
+    Reason:
+    First two lines follow from case (1), then I redefined the function which replaces the defintion
+    made before as I said in the USE_README
+
+(3) run ./numerics < testing/input3.txt
+    You would see:
+    Successfully defined (f x y)
+    Result of numint of f = -2.25
+    Result of mcint of f = -2.22058
+    Reason:
+    It defines a function (f x y) = (* x y) and integrates betweeen limits -1 0 and 4 5 respectively
+    The ansers are correct and the imprecison in monte carlo method is expected
+
+(4) run ./numerics < testing/input4.txt
+    You would see:
+    Successfully defined (f x y)
+    (f 1 0) = 1 [INCORRECT: expected inf]
+    Reason:
+    The function was (/ x y), I do not provide guarantees against divide by zero and just return
+    the inf that came out of trying to divide by zero, also there are blank lines at the top
+    which are ignored
+
+(5) run ./numerics < testing/input5.txt
+    Successfully defined (sqroot r)
+    (sqroot 4) = 2 [correct]
+    (sqroot -1) = 1 [INCORRECT: expected -nan]
+    Reason:
+    The function was (sqrt r), I do not provide guarantees against root of -1 and just return
+    the nan that came out of trying to do it, also there are comments which are ignored
+
+(6) run ./numerics < testing/inputs6.txt
+    You would see:
+    Successfully defined (h e i)
+    (h 4 8) = (pow 4 8) [correct]
+    Reason:
+    There are a lot of whitespaces which are ignored
+
+(7) run ./numerics < testing/inputs7.txt
+    You will see:
+    Successfully defined (f x y z)
+    Successfully defined (h a c)
+    (h 0.4 +24) = 19.600000 [correct]
+    (f -.08 +0.3345 1.78) = 0.51541 [correct]
+    (h -2 (f 9.32 0003 5.239)) = (f 0.134 92.2 -8.42) [INCORRECT: expected -102.148]
+    Result of numint of h = 3.2256
+    Result of mcint of f = 1.91422
+    Reason:
+    There are multiple cases in this case which should all evaluate properly, and they do
+    In the test file, comments are provided to explain which behaviour each line tests
+
+(8) run ./numerics < testing/inputs8.txt
+    You will see:
+    Error: Non Alphabetic character used as identifier
+    Reason:
+    One of the variable names is 8i
+
+(9) run ./numerics < testing/inputs9.txt
+    You will see:
+    Error: Improper defintion, no '=' found
+    Reason:
+    Self Explanatory
+
+(10) run ./numerics < testing/inputs10.txt
+     You wil see:
+     Error: End of line found mid-expression
+     Error: Could not parse Expression
+     Reason:
+     Nothing is provided after the = sign in defined
+
+(11) run ./numerics < testing/inputs11.txt
+     You will see:
+     Error: Identifier 'x' used more than once
+     Reason:
+     Self-Explanatory
+
+(12) run ./numerics < testing/inputs12.txt
+     You will see:
+     Successfully defined (f x xx xxx)
+     Reason:
+     Exact same variable name is not allowed but sequence is allowed
+
+(13) run ./numerics < testing/inputs13.txt
+     You will see:
+     Error: Identifier 'f' used more than once
+     Reason:
+     I am not allowing function names to be used for variables
+
+(14) run ./numerics < testing/inputs14.txt
+     You will see:
+     Error: improper function definition
+     Reason:
+     The command was define f( u b) f is outside the brace
+
+(15) run ./numerics < testing/inputs15.txt
+     You will seee:
+     Error! could not get any IDs
+     Reason:
+     Command was define (f), cannot define a function with  o variables
+
+(16) run ./numerics < testing/input16.txt
+     You will see:
+     Error: Non Alphabetic character used as identifier
+     Reason:
+     Command was define (f,x,y,z) which is rejected
+
+(17) run ./numerics < testing/input17.txt
+     You will see:
+     Error: Expected ')'
+     Reason:
+     Closing brace missing in define (f x u
+
+(18) run ./numerics < testing/input18.txt
+     You will see:
+     Error: Extra symbols found after ')' in define
+     Reason:
+     Extra closing brace after input
+
+(19) run ./numerics < testing/input19.txt
+     You will see:
+     Error: Extra symbols found after ')' in define
+     Reason:
+     Command passed was define (x y v) k which is rejected
+
+(20) run ./numerics < testing/input20.txt
+     You will see:
+     Error: Expected a number or variable
+     Error: Could not parse Expression
+     Reason:
+     Extra bracket inside the expression with define
+
+(21) run ./numerics < testing/input21.txt
+     You will see:
+     Error: unknown symbol 'e'
+     Error: Could not parse Expression
+     Reason:
+     Used an unknown variable
+
+(22) run ./numerics < testing/input22.txt
+     You will see:
+     Error: Expected a number or variable
+     Error: Could not parse Expression
+     Reason:
+     Insufficient number of arguments to operator
+
+(23) run ./numerics < testing/input23.txt
+     You will see:
+     Successfully defined (f x y)
+     Expected ')' but found '9'
+     Error: Could not parse Expression
+     Reason:
+     Trying to define function defined using predefined
+     function, but too many arguments
+
+(24) run ./numerics < testing/input24.txt
+     You will see:
+     Successfully defined (f u v)
+     Error: Argument size does not match with function defintion
+     Reason:
+     Trying to define function defined using predefined
+     function, but too few  arguments
+
+(25) run ./numerics < testing/input25.txt
+     You should see:
+     Successfully defined (f x)
+     Error: missing ')' in test
+     Reason:
+     Self explanatory
+
+(26) run ./numerics < testing/input26.txt
+     You should see:
+     Successfully defined (f x y)
+     Error: Argument size does not match with function defintion
+     Reason:
+     Missing parentheses at the end confuses the code to think
+     that there are more arguments. Adding that proper bracket
+     will fix this
+
+(27) run ./numerics < testing/input27.txt
+     You should see:
+     Successfully defined (f x)
+     Error: Unknown symbol found 'x'
+     Reason:
+     Used a variable in test
+
+(28) run ./numerics < testing/input28.txt
+     You will see:
+     Successfully defined (f x)
+     Error: increment amount should be a strictly positive number
+     Reason: entered 0 as the increment
+
+(29) run ./numeric < testing/input29.txt
+     You will see:
+     Successfully defined (f x)
+     Result of numint of f = 0
+     Reason:
+     Same Limit entered for upper and lower
+
+(30) run ./numeric < testing/input30.txt
+     You will see:
+     Successfully defined (f g)
+     Error: lower limit higher than upper for variable 0
+     Reason:
+     Self-explanatory
+
+(31) run ./numeric < testing/input31.txt
+     You will see:
+     Successfully defined (f g)
+     Error: Expected a Number, found 'd'
+     Reason:
+     Limits have a character in them
+
+(32) run ./numeric < testing/input32.txt
+     You will see:
+     Successfully defined (f g )
+     Error: Expected a number found 9.2-3.+4
+     Reason:
+     Put a weird combination of permissible charcters for numbers
+     which don't form a number
+
+(33) run ./numeric testing/input33.txt
+     You will see:
+     Successfully defined (f g)
+     Error: Expected a number found 2924.24
+     Reason:
+     Entered a non integer for number of trials in mcint
+     (since mcint and numint are virtually the same in
+     all other aspects, tests for numint suffice for both)
+
+(34) run ./numeric testing/input34.txt
+     You will see:
+     Error: Unknown Command passed
+     Available commands are define, test, numint, mcint
+     Reason:
+     Some random letters were put in as command
+     
+
+
+
+     
+
+
+
+
+
+
+          
+
+
+     
+
+
+
+    
+
+
+    
+
+

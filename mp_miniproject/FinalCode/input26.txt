@@ -1,0 +1,2 @@
+define (f x y) = (+ x y)
+test (f 9 10) (f ( f (f 9 3) 5 6)

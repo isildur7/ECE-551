@@ -1,0 +1,2 @@
+define (f g) = g
+mcint f 2924.24 0 1

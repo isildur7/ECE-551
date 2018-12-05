@@ -1,0 +1,5 @@
+define (f x) = 2
+# Successfully defined (f)
+test (f           3      )                       2
+define (f x y) = (* x y)
+test (f 4 2) (+ 2 6)

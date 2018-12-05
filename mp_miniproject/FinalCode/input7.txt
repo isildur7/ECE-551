@@ -1,0 +1,15 @@
+#This code will demonstrate all the correct behaviours of the program
+
+#function defintion
+define 	  (f	x y       z) = (+ x (* y z)) # whitespaces
+define (h a	c) = (* a (f 1 2 c)) #function in function
+
+# tests
+test (h 0.4 +24) 19.600000	#should be correct, sign use on number
+test (f -.08 +0.3345 1.78) 0.51541 #should be correct, sign use and just the dot for decimal
+test (h -2 (f 9.32 0003 5.239) ) (f 0.134 92.2 -8.42) # I don't know, must be incorrect though, function in function
+
+# integration
+# ps I dont actually know the results, but I know that they ususally correct
+numint h 0.01 -0.5 .783 3 5
+mcint f 10000 0 1 -1 1 	  2	4

@@ -1,0 +1,107 @@
+Welcome to the numerical solver program. Please read carefully before proceeding.
+
+There are four supported commands:
+      1. define
+      2. test
+      3. numint
+      4. mcint
+In addition, you can add comments by using the # sign. Anything after this sign is
+ignored. I will explain how to do each of these briefly. Please note that this pr-
+ogram acts a lot like a compiler and deviation from the guidelines will cause the
+program to print an error message and exit. I have not added the support for a python
+shell like interactive environment. Now let us take a short tour of the commands.
+
+1. define
+   This command defines and stores a function for future use. Usage would look like
+   define (fname variable variable ... ) = expression
+   In the right hand side, after the command, we declare a function: fname, which is
+   the name of the function. We then give a list of variables this function takes.
+   When we feed values to the identifiers they will be called arguments fname and
+   variables are called identifiers and all identifiers MUST BE uppercase or lowercase
+   alphabets. Use of numbers or symbols is not allowed to make identifiers. Whitespace
+   should be used to separates the identifiers. We use parentheses to start and end
+   the list. For example:
+   define (f x y z) will define a function f which has variables x, y and z
+   define f x y z will produce error because brackets were not used
+   define (# x1 y4) will produce an error because non-alphabetic characters were used
+   define (f x) t will produce error because there is something outside the brackets
+   define (f) will produce error because no variables are provided
+   
+   Now you would like to define a mathematical expression for this function.
+   Expressions are in prefix format and composed of operators, variables, and numbers.
+   Operators are either one of the pre-defined operations, one of +,-,/,*,modulus,sin,
+   cos,ln,pow or a function which we have already defined. Operators must be inside
+   parentheses and specifically must be the first identifier inside the parentheses.
+   It should be followed up with an appropriate number of arguments which can be either
+   a variable, a number or another valid expression. Failure to provide these will mean
+   that program prints an error and exit. Use of identifiers which do not exist will
+   result in the program quitting. Some examples are:
+   (+ 8 9) is correct
+   (sin 2.33) is correct
+   define (f x y z) = (* y (+ 2 (/ x z))) is correct
+   define (f x y z) = (* y (+ 2 (/ x w))) will produce error as w is unidentified
+   (* 7) will produce error as * requires two arguments
+   (f u 7) will produce error if above definition of f exists (requires three args)
+   (+ 8 (f 9 4 3)) is correct
+
+   Attempting to redefine a function which already exists will DELETE THE ORIGINAL
+   DEFINITION and replace it with a new one.
+
+2. test
+   This command has two arguments.  The first must be an expression with no variables,
+   they may refer to functions, and have numeric constants for the arguments. However,
+   they may call other functions. The following are all valid (assuming appropriate
+   definitions of f, g, and h exist):
+   test (f 3 4.2 5) 14.6
+   test (f (g 1 2) (g 3 4) (h 5 6 -7))  99.87
+
+   The second argument is the expected value for the expression to evaluate to. The
+   test command will evaluate its first argument, and compare to its second argument.
+   You may have the second argument be a numeric constant or you may allow an arbit-
+   rary expression to appear there
+   test (f 1 2 3) (g 4 5) is correct
+   However, following are incorrect and will produce an error
+   test (f 1 3 4) (+ x y) - only numbers are allowed
+   test (f 1 2) 45 - assuming the earlier definition of f wrong number of args
+   test (f 3 3 2) (30) - cannot put number constants in brackets
+   test (f 9 3 4) 242 (g 2 5) - three expressions after test
+
+3. numint
+   This command takes as argument one predefined function, step size, and a pair of
+   limits for each of the variables of that function. For example, for our example
+   function f, there are three variables, so a valid command looks like:
+   numint f 0.005 0 1 0 1 3 5
+   So as we can see there are six numbers, two for each variable. The step size must
+   be positive and greater than zero, first number of each limit pair is the lower
+   limit and it must not be greater than the second number of the pair. Function name
+   must exist i.e. you should have used a define command for that function earlier.
+   Incorrect examples might look like:
+   numint f 0.003 0 1 0 1 - error, because only two pairs of limits provided
+   numint f 0 0 1 0 1 0 1 - error step size must be greater than zero
+   numint werwrw 0.33 0 1 0 1 - error funnction name does not exist
+
+4. mcint
+   This command takes as argument one predefined function, number of trials, and a
+   pair of limits for each of the variables of that function. For example, for our
+   example function f, there are three variables, so a valid command looks like:
+   numint f 10000 0 1 0 1 3 5
+   So as we can see there are six numbers, two for each variable. The number of trials
+   must be an integer greater than 1, first number of each limit pair is the lower
+   limit and it must not be greater than the second number of the pair. Function name
+   must exist i.e. you should have used a define command for that function earlier.
+   Incorrect examples might look like:
+   numint f 1000 0 1 0 1 - error, because only two pairs of limits provided
+   numint f 0.343  0 1 0 1 0 1 - error number of trials must be greater than one
+   numint f 100.45 0 1 0 1 0 1- error number of trials must be an integer
+   numint werwrw 0.33 0 1 0 1 - error funnction name does not exist
+
+5. Comments
+   Anything typed after a # character upto the end of line is treated as a comment
+   and is ignored. example:
+    # The following defines the famous xy + z-3 function
+    define (f x y z) = (+ (* x y) (- z 3))
+    test (f 3 4.2 5)  14.6     # some other comment
+    test (f -1 9.2 6) -6.2 
+
+
+   

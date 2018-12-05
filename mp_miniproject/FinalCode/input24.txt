@@ -1,0 +1,2 @@
+define (f u v) = (+ u v)
+test (f (f 4) (f 2 0)) 3

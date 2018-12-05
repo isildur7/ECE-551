@@ -26,7 +26,6 @@ class Expression
   // 5. Numbers (doubles)
  public:
   // Decide and add methods
-
   virtual double evaluate(varmap_t & varMap) = 0;
   virtual ~Expression() {}
 };
@@ -47,6 +46,8 @@ class BinOp : public Expression
   // Taken in part from assignment
   BinOp(Expression * lhs, Expression * rhs, std::string op) : lhs(lhs), rhs(rhs), operation(op) {}
 
+  BinOp(std::string op) : lhs(NULL), rhs(NULL), operation(op) {}
+
   virtual double evaluate(varmap_t & varMap) {
     if (operation.compare("+") == 0)
       return lhs->evaluate(varMap) + rhs->evaluate(varMap);
@@ -61,6 +62,26 @@ class BinOp : public Expression
       return fmod(lhs->evaluate(varMap), rhs->evaluate(varMap));
     else if (operation.compare("pow") == 0)
       return pow(lhs->evaluate(varMap), rhs->evaluate(varMap));
+    else {
+      std::cerr << "Error: Unknown Operation\n";
+      return 0;
+    }
+  }
+
+  double quick_evaluate(double lhs, double rhs) {
+    // for quick evaluation on doubles
+    if (operation.compare("+") == 0)
+      return lhs + rhs;
+    else if (operation.compare("-") == 0)
+      return lhs - rhs;
+    else if (operation.compare("*") == 0)
+      return lhs * rhs;
+    else if (operation.compare("/") == 0)
+      return lhs / rhs;
+    else if (operation.compare("%") == 0)
+      return fmod(lhs, rhs);
+    else if (operation.compare("pow") == 0)
+      return pow(lhs, rhs);
     else {
       std::cerr << "Error: Unknown Operation\n";
       return 0;
@@ -88,6 +109,8 @@ class UnOp : public Expression
   // Taken in part from Assignment 83
   UnOp(Expression * hs, std::string op) : side(hs), operation(op) {}
 
+  UnOp(std::string op) : side(NULL), operation(op) {}
+
   virtual double evaluate(varmap_t & varMap) {
     if (operation.compare("sin") == 0)
       return sin(side->evaluate(varMap));
@@ -97,6 +120,21 @@ class UnOp : public Expression
       return log(side->evaluate(varMap));
     else if (operation.compare("sqrt") == 0)
       return sqrt(side->evaluate(varMap));
+    else {
+      std::cerr << "Error:Unknown Operation\n";
+      return 0;
+    }
+  }
+  double quick_evaluate(double side) {
+    // for quick evalution
+    if (operation.compare("sin") == 0)
+      return sin(side);
+    else if (operation.compare("cos") == 0)
+      return cos(side);
+    else if (operation.compare("ln") == 0)
+      return log(side);
+    else if (operation.compare("sqrt") == 0)
+      return sqrt(side);
     else {
       std::cerr << "Error:Unknown Operation\n";
       return 0;
@@ -166,6 +204,8 @@ class FuncStore : public Expression
   std::vector<std::string> get_var_vec() const { return var_vec; }
 
   Expression * get_expression() { return expr; }
+
+  ~FuncStore() { delete expr; }
 };
 
 class FuncOp : public Expression
@@ -209,6 +249,14 @@ class FuncOp : public Expression
 
   int get_nargs() {  // gives the number of arguments
     return expr_vec.size();
+  }
+
+  ~FuncOp() {
+    // Don't delete func,it is in the table and will be
+    // deleted when the table is deleted
+    for (size_t i = 0; i < expr_vec.size(); i++) {
+      delete expr_vec[i];
+    }
   }
 };
 

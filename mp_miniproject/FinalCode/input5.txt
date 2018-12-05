@@ -1,0 +1,5 @@
+#checking square root -1
+
+define (sqroot r) = (sqrt r)
+test (sqroot 4) 2
+test (sqroot -1) 1 #what will it be?

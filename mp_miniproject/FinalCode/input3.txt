@@ -1,0 +1,3 @@
+define (f x y) = (* x y)
+numint f .1 -1 0 4 5
+mcint f 1000 -1 0 4 5

@@ -49,7 +49,7 @@ void parse_mcint(std::string & input, funcmap_t & funcmap) {
     std::cerr << "Error: end of line found mid sentence\n";
     exit(EXIT_FAILURE);
   }
-  std::string buffer = getNextString(it);
+  std::string buffer = getNextStringNum(it);
   long trials = strtol_wrapper(buffer);
   if (trials < 1) {
     std::cerr << "Error: NUmber of trials is less than 1, cannot proceed\n";
@@ -71,5 +71,5 @@ void parse_mcint(std::string & input, funcmap_t & funcmap) {
 
   // Actual integration
   double result = doMCInt(funcmap[fname], limits, trials);
-  std::cout << "Result of mcint = " << result << std::endl;
+  std::cout << "Result of mcint of " << fname << " = " << result << std::endl;
 }

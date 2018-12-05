@@ -15,5 +15,7 @@ double strtod_wrapper(std::string input);
 std::string getNextString(std::string::iterator & it);
 std::string removeExtraSpaces(std::string input);
 long strtol_wrapper(std::string input);
+void CheckChar(std::string::iterator & it);
+std::string getNextStringNum(std::string::iterator & it);
 
 #endif

@@ -1,0 +1,2 @@
+define (f x) = (sqrt x)
+test (f x) (f x)

@@ -11,7 +11,7 @@ double read_one_limit(std::string::iterator & it) {
     std::cerr << "Error: Expected number as limit for integral, found '" << *it << "'\n";
     exit(EXIT_FAILURE);
   }
-  std::string buffer = getNextString(it);
+  std::string buffer = getNextStringNum(it);
   return strtod_wrapper(buffer);
 }
 
@@ -92,8 +92,12 @@ void parse_numint(std::string & input, funcmap_t & funcmap) {
     std::cerr << "Error: end of line found mid sentence\n";
     exit(EXIT_FAILURE);
   }
-  std::string buffer = getNextString(it);
+  std::string buffer = getNextStringNum(it);
   double increment = strtod_wrapper(buffer);
+  if (increment <= 0) {
+    std::cerr << "Error: increment amount should be a strictly positive number";
+    exit(EXIT_FAILURE);
+  }
   // Now we read in the limits. There should be a limit
   // for each argument of the function. So two values.
   int nargs = funcmap[fname]->get_nargs();
@@ -116,5 +120,5 @@ void parse_numint(std::string & input, funcmap_t & funcmap) {
   }
   // Actual integration
   double result = doNumInt(funcmap[fname], highVec, lowVec, increment);
-  std::cout << "Result of numint = " << result << std::endl;
+  std::cout << "Result of numint of " << fname << " = " << result << std::endl;
 }

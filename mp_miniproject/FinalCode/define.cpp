@@ -17,7 +17,7 @@ std::vector<std::string> getIDs(std::string & define) {
     // occurence of space and put in the
     // vector
     std::string temp;
-    while (*it != ' ' && *it != ')') {
+    while (*it != '\n' && *it != '\t' && *it != ' ' && *it != ')') {
       if (it == define.end()) {
         // If end of line encountered, the opening parentheses
         // was never closed
@@ -32,7 +32,6 @@ std::vector<std::string> getIDs(std::string & define) {
       temp.push_back(*it);
       ++it;
     }
-
     for (size_t i = 0; i < identifier.size(); i++) {
       if (temp == identifier[i]) {
         std::cerr << "Error: Identifier '" << temp << "' used more than once\n";
@@ -41,9 +40,11 @@ std::vector<std::string> getIDs(std::string & define) {
     }
     identifier.push_back(temp);
   }
-  if (identifier.empty()) {
+  // Check if any extra unwated chars are present
+  CheckChar(it);
+  if (identifier.size() < 2) {
     // Don't want to return empty vector
-    std::cerr << " Error! could not get any IDs";
+    std::cerr << " Error! could not get any IDs\n";
     exit(EXIT_FAILURE);
   }
   return identifier;
@@ -283,6 +284,8 @@ void parse_define(std::string & in, funcmap_t & funcmap) {
     funcmap.erase(name);
     exit(EXIT_FAILURE);
   }
+  // Check if any extra unwanted Chars are present
+  CheckChar(it);
   // Set this expression in the function stored
   funcmap[name]->set_expression(expr);
   // and now print successfull definition
