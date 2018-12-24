@@ -1,0 +1,3 @@
+Grade: 95.5
+Comments:
+Great abstraction and documentation! Wrong answer when testing simple functions (often says "[INCORRECT: expected 0]"), and your numerical intergration always overestimates the value, suggesting your using the wrong slope of the trapezoids. But overall really well written code. Good job!
